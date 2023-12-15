@@ -428,6 +428,7 @@ footer li a {
   align-items: center;
   line-height: 0;
   animation: rotating 4s linear infinite;
+  z-index: 100;
 }
 
 .mytranstition,
