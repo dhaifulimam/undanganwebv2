@@ -37,6 +37,14 @@ function enableScroll() {
   window.location.href = "#home";
   playAudio();
   isplaying = true;
+  AOS.init();
+  hamburger.addEventListener("click", function () {
+    mynavbar.style.overflow = "visible";
+  });
+
+  offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+    mynavbar.style.overflow = "hidden";
+  });
 }
 
 audioIconWrapper.addEventListener("click", function () {
@@ -67,14 +75,6 @@ disableScroll();
 // offcanvas.addEventListener("show.bs.offcanvas", function () {
 //   mynavbar.style.overflow = "visible";
 // });
-
-hamburger.addEventListener("click", function () {
-  mynavbar.style.overflow = "visible";
-});
-
-offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-  mynavbar.style.overflow = "hidden";
-});
 
 // Submiting form
 
